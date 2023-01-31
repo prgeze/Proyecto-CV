@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/estilos.css">
+	<title></title>
+	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+	<!-- incluimos tipografia roboto desde google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<!-- incluimos bootstap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<!--Iconos del Formulario de contacto-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<header>
+		<!-- barra de navegacion-->
+		<nav>
+			<!-- lista desordenada -->
+			<ul class="menu">
+				<!-- items de la lista -->
+				<a href="#resumen"><li>Info</li></a>
+				<a href="#proyectos"><li>Proyectos</li></a>
+				<a href="#contacto"><li>Contacto</li></a>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<!-- seccion donde se muestra el resumen de la persona -->
+		<section id="resumen">
+			<div class="contenedor">
+				<img src="" alt="perfil de usuario" id="foto">
+			</div>
+			<h1 ><span id="nombre"></span></h1>
+			<h2><span id="skill">Estudiante de Argentina Programa</span></h2>
+		</section>
+
+		<!-- seccion donde se muestra los proyectos de la persona -->
+
+		<section id="proyectos">
+			<h2>Proyectos realizados</h2>
+			<div class="lista-proyectos">
+				
+				<div class="detalle-proyecto">
+					<img src="./img/codigo_front_end.jpg" alt="Proyecto 1">
+					<h3>Proyecto 1</h3>
+					<p>Descripcion del proyecto 1</p>
+					<a href="http://www.google.com.ar">Enlace al proyecto 1</a>
+				</div>
+			
+				<div class="detalle-proyecto">
+					<img src="./img/codigo_front_end.jpg" alt="Proyecto 2">
+					<h3>Proyecto 2</h3>
+					<p>Descripcion del proyecto 2</p>
+					<a href="http://www.google.com.ar">Enlace al proyecto 2</a>
+				</div>
+			
+				<div class="detalle-proyecto">
+					<img src="./img/codigo_front_end.jpg" alt="Proyecto 3">
+					<h3>Proyecto 3</h3>
+					<p>Descripcion del proyecto 3</p>
+					<a href="http://www.google.com.ar">Enlace al proyecto 3</a>
+				</div>			
+			</div>
+		</section>
+
+		<!-- seccion donde se muestra un formulario de la persona -->
+		<section id="contacto">
+			<h2>Contactame</h2>
+			<div class="container-form">			
+				
+				<div class="info-form">	
+					<p>Te dejo mis datos de contacto para cualquier consulta o sugerencia. Gracias!</p>
+					<a href="#"><i class="fa fa-phone"></i> 11-5700-9057</a>
+            		<a href="#"><i class="fa fa-envelope"></i> correolopeze@gmail.com</a>
+            		<a href="#"><i class="fa fa-map-marked"></i> Buenos Aires, Argentina</a>
+				</div>
+			
+				<!-- Por lo que estuve investigando la mejor opcion para tratar un formulario que se envia x mail,
+					es utilizar un lenguaje del lado del servidor (ej: PHP). En esta implementacion utilizo una validacion
+					de los INPUT nombre y email con la opcion required de HTML y envio el formulario con JS utilizando
+					la aplicacion de correo que tiene por defult el usuario en su dispositivo. -->
+				<form action="#" method="post" autocomplete="off">
+            		<input id="nombre" type="text" name="nombre" placeholder="Tu Nombre" class="campo" required>
+            		<input id="email" type="email" name="email" placeholder="Tu Email" class="campo" required>
+            		<textarea id="mensaje" name="mensaje" placeholder="Tu Mensaje..."></textarea>
+            		<input id="enviarCorreo" type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">
+            		<a id="aEmail"></a>
+        		</form>       		
+        	</div>        
+		</section>
+	</main>
+	<footer></footer>
+<script type="text/javascript" src="./js/funciones.js"></script>
+</body>
+</html>
